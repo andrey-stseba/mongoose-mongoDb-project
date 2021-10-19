@@ -1,0 +1,21 @@
+POST http://127.0.0.1:5000/api/cars HTTP/1.1
+Content-Type: application/json
+
+###
+
+GET http://127.0.0.1:5000/api/cars HTTP/1.1
+
+###
+
+GET http://127.0.0.1:5000/api/cars/carId HTTP/1.1
+
+###
+
+PATCH http://127.0.0.1:5000/api/cars/carId HTTP/1.1
+Content-Type: application/json
+
+###
+
+DELETE http://127.0.0.1:5000/api/cars/carId HTTP/1.1
+
+
