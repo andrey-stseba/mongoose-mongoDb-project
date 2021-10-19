@@ -25,6 +25,10 @@ const carSchema = new Schema({
     required: true,
     min: 0,
   },
+  color: {
+    type: String,
+    required: true,
+  },
 });
 
 const Car = mongoose.model('cars', carSchema);
