@@ -19,7 +19,7 @@ module.exports.createCar = async (req, res, next) => {
 
 module.exports.getCars = async (req, res, next) => {
   try {
-    const foundCars = await Car.find().limit(3);
+    const foundCars = await Car.find().limit(4);
 
     res.status(200).send({ data: foundCars });
   } catch (err) {
@@ -45,10 +45,11 @@ module.exports.getCarById = async (req, res, next) => {
 module.exports.updateCarById = async (req, res, next) => {
   const {
     params: { carId },
+    body,
   } = req;
   try {
-    const updateCar = await Car.findByIdAndUpdate(carId);
-    if (updateCar) {
+    const updatedCar = await Car.findByIdAndUpdate(carId, body);
+    if (updatedCar) {
       return next();
     }
     next(createError(404, 'User not found'));

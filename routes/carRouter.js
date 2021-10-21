@@ -10,7 +10,7 @@ carRouter
   .post(carController.createCar);
 
 carRouter
-  .route('./:carId')
+  .route('/:carId')
   .get(carController.getCarById)
   .patch(carController.updateCarById, carController.getCarById)
   .delete(carController.deleteCarById);

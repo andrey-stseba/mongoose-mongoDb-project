@@ -3,33 +3,29 @@ Content-Type: application/json
 
 {
     "brand":"Skoda",
-    "series":"Yeti",
-    "createdOn":"2019-10-20",
+    "series":"Karoq",
+    "createdOn":"2021-01-20",
     "isСrashed":"false",
-    "mileage":77,
-    "color":"red"
+    "mileage":20,
+    "color":"black"
 }
 
 ###
-
 GET http://127.0.0.1:5000/api/cars HTTP/1.1
 
 ###
-
-GET http://127.0.0.1:5000/api/cars/carId HTTP/1.1
+GET http://127.0.0.1:5000/api/cars/617137b3ec27acf598a23baa HTTP/1.1
 
 ###
-
-PATCH http://127.0.0.1:5000/api/cars/carId HTTP/1.1
+PATCH http://127.0.0.1:5000/api/cars/617137b3ec27acf598a23baa HTTP/1.1
 Content-Type: application/json
 
 {
     "isСrashed":"true",
-    "mileage":90
+    "mileage":25
 }
 
 ###
-
-DELETE http://127.0.0.1:5000/api/cars/carId HTTP/1.1
+DELETE http://127.0.0.1:5000/api/cars/617137b3ec27acf598a23baa HTTP/1.1
 
 
